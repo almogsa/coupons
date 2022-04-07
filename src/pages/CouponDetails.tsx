@@ -90,7 +90,7 @@ export function Form({ coupon, onSubmitHandler }: CouponProps) {
             <input
                 {...register('regularPrice', {
                     value: regularPrice,
-                    required: true
+                    required: true,
                 })}
             />
             <Error errors={errors.regularPrice} />

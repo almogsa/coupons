@@ -197,7 +197,7 @@ function EditListing() {
         const imgUrls = await Promise.all(
             [...imgUrls].map((image) => storeImage(image))
         ).catch(() => {
-         //   setLoading(false)
+            //   setLoading(false)
             toast.error('Images not uploaded')
             return
         })
