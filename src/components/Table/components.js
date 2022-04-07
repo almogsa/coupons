@@ -2,8 +2,6 @@ import React from 'react'
 import Thumbnail from './thumbnail'
 import Types from './types'
 import { Type } from './style'
-import { Button } from '@mui/material'
-import IconButton from '@mui/material/IconButton'
 import { DeleteIconRed } from '../../styles/Styles'
 
 const Cell = ({ className, cellData, column }) => {

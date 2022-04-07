@@ -1,6 +1,4 @@
-import { Button } from '@mui/material'
 import BaseTable, { Column } from 'react-base-table'
-import IconButton from '@mui/material/IconButton'
 import { DeleteIconRed } from '../../styles/Styles'
 import Types from '../../components/Table/types'
 import { Type } from '../../components/Table/style'

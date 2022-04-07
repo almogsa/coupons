@@ -1,10 +1,5 @@
 import styled from 'styled-components'
 
-import DeleteIcon from '@mui/icons-material/Delete'
-
-export const DeleteIconRed = styled(DeleteIcon)({
-    color: '#ae2a24',
-})
 
 export const Styles = styled.div`
     background: lavender;
