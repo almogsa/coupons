@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+deploy - first time
+install curl -sL https://firebase.tools | bash
+firebase login
+firebase init
+
+//////
+deploy second time
+
+npm run build
+firebase deploy
+
+/////
+yarn prettier --write .
+
 ## Available Scripts
 
 In the project directory, you can run:

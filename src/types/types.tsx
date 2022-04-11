@@ -5,6 +5,7 @@ export enum GroupedItemType {
     BuyMe,
     Load,
     McDonalds,
+    TenBis,
     Other,
 }
 

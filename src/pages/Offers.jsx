@@ -27,9 +27,9 @@ function Offers() {
                 // Create a query
                 const q = query(
                     listingsRef,
-                    where('type', '==', 'pais'),
+                    //   where('type', '==', 'pais'),
                     orderBy('timestamp', 'desc'),
-                    limit(10)
+                    limit(4)
                 )
 
                 // Execute query
@@ -67,7 +67,7 @@ function Offers() {
             // Create a query
             const q = query(
                 listingsRef,
-                where('type', '==', 'pais'),
+                //   where('type', '==', 'pais'),
                 orderBy('timestamp', 'desc'),
                 startAfter(lastFetchedListing),
                 limit(10)

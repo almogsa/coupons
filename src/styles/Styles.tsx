@@ -4,6 +4,7 @@ export const Styles = styled.div`
     background: lavender;
     padding: 20px;
     height: 100%;
+    overflow: scroll;
 
     h1 {
         border-bottom: 1px solid white;
@@ -24,14 +25,15 @@ export const Styles = styled.div`
         justify-content: space-around;
         margin: 0 auto;
         max-width: 500px;
-        padding: 30px 50px;
+        padding: 10px 30px;
     }
 
-    input {
+    input,
+    select {
         border: 1px solid #d9d9d9;
         border-radius: 4px;
         box-sizing: border-box;
-        padding: 10px;
+        padding: 5px;
         width: 100%;
     }
 
@@ -42,13 +44,14 @@ export const Styles = styled.div`
         font-size: 14px;
         font-weight: 500;
         margin-bottom: 5px;
+        height: 20px;
     }
 
     .error {
         color: red;
         font-family: sans-serif;
         font-size: 12px;
-        height: 30px;
+        height: 15px;
     }
 
     .submitButton {

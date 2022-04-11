@@ -3,14 +3,16 @@ import { GroupedItemType } from '../types/types'
 import paisImage from '../assets/jpg/pais1.png'
 import buyMeImage from '../assets/jpg/buyme.png'
 import mcdonaldsImage from '../assets/jpg/mcdonalds.jpeg'
+import tenbisImage from '../assets/jpg/tenbis.png'
 import loadImage from '../assets/jpg/load.png'
 import otherImage from '../assets/jpg/other.png'
 import rentCategoryImage from '../assets/jpg/rentCategoryImage.jpg'
 import sellCategoryImage from '../assets/jpg/sellCategoryImage.jpg'
 import styled from 'styled-components'
-const getLink = (category: string) => {}
 
-export const CategoryData = {
+export const CategoryData: {
+    [key: string]: { link: string; header: string; image: string }
+} = {
     [GroupedItemType.Pais]: {
         link: '/category/pais',
         header: 'Pais',
@@ -30,6 +32,11 @@ export const CategoryData = {
         link: '/category/mcdonalds',
         header: 'McDonals',
         image: mcdonaldsImage,
+    },
+    [GroupedItemType.TenBis]: {
+        link: '/category/tenbis',
+        header: 'Tenbis',
+        image: tenbisImage,
     },
     [GroupedItemType.Other]: {
         link: '/category/other',

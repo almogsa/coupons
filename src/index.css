@@ -145,7 +145,7 @@ button {
     left: 0;
     bottom: 0;
     right: 0;
-    height: 85px;
+    height: 70px;
     background-color: #ffffff;
     z-index: 1000;
     display: flex;
@@ -613,6 +613,8 @@ button {
 
 .profile {
     margin-bottom: 10rem;
+    height: 100%;
+    overflow: scroll;
 }
 
 .profileHeader {
@@ -820,4 +822,10 @@ button {
     margin-left: 1rem;
     font-size: 0.8rem;
     opacity: 0.75;
+}
+
+.listingsList {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
 }

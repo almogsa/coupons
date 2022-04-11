@@ -41,6 +41,7 @@ export function Form({ coupon, onSubmitHandler }: CouponProps) {
         type,
         timestamp,
         id,
+        link,
     } = (coupon as Coupon) || {}
 
     const {
@@ -63,7 +64,9 @@ export function Form({ coupon, onSubmitHandler }: CouponProps) {
     console.log('Got Coupon ', name)
     return (
         <form onSubmit={onSubmit}>
-            <h1>Coupon Details </h1>
+            <div style={{ textAlign: 'center', color: ' green' }}>
+                Coupon Details{' '}
+            </div>
 
             <label>Type</label>
             <select {...register('type')}>
@@ -88,6 +91,7 @@ export function Form({ coupon, onSubmitHandler }: CouponProps) {
 
             <label> Regular Price</label>
             <input
+                type="number"
                 {...register('regularPrice', {
                     value: regularPrice,
                     required: true,
@@ -97,6 +101,7 @@ export function Form({ coupon, onSubmitHandler }: CouponProps) {
 
             <label>discounted Price </label>
             <input
+                type="number"
                 {...register('discountedPrice', {
                     value: discountedPrice,
                 })}
@@ -126,6 +131,8 @@ export function Form({ coupon, onSubmitHandler }: CouponProps) {
             />
             <Error errors={errors.dueDate} />
 
+            <label>Link</label>
+            <input {...register('link', { required: true, value: link })} />
             <input
                 className="formInputFile"
                 type="file"

@@ -13,9 +13,11 @@ export default [
         align: 'center',
     },
     {
-        dataKey: 'code',
-        title: 'code',
+        dataKey: 'type',
+        title: 'Type',
         width: 100,
+        sortable: true,
+        cellRenderer: ({ cellData }) => <Type type={cellData}>{cellData}</Type>,
     },
     {
         dataKey: 'name',
@@ -23,24 +25,18 @@ export default [
         width: 110,
     },
     {
-        dataKey: 'type',
-        title: 'Type',
-        width: 150,
-        sortable: true,
-        cellRenderer: ({ cellData }) => <Type type={cellData}>{cellData}</Type>,
+        dataKey: 'code',
+        title: 'code',
+        width: 110,
     },
-    {
-        dataKey: 'description',
-        title: 'desc',
-        width: 60,
-        sortable: true,
-    },
-    {
-        dataKey: 'dueDate',
-        title: 'dueDate',
-        width: 100,
-        sortable: true,
-    },
+
+    // {
+    //     dataKey: 'description',
+    //     title: 'desc',
+    //     width: 60,
+    //     sortable: true,
+    // },
+
     {
         dataKey: 'discountedPrice',
         title: 'discountedPrice',
@@ -51,6 +47,12 @@ export default [
         dataKey: 'regularPrice',
         title: 'regularPrice',
         width: 150,
+        sortable: true,
+    },
+    {
+        dataKey: 'dueDate',
+        title: 'dueDate',
+        width: 100,
         sortable: true,
     },
     // {

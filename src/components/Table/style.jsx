@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 //import { keyframes } from '@emotion/core';
 
-const colorsType = {
+export const colorsType = {
     sale: '#9c9c63',
     Fighting: '#ae2a24',
     pais: '#8e6eeb',

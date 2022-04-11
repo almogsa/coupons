@@ -18,6 +18,7 @@ import ListingItem from '../components/ListingItem'
 import arrowRight from '../assets/svg/keyboardArrowRightIcon.svg'
 import homeIcon from '../assets/svg/homeIcon.svg'
 import { Coupon, FormData } from '../types/types'
+import CouponView from '../components/CouponView'
 
 function Profile() {
     const auth = getAuth()
@@ -50,7 +51,7 @@ function Profile() {
             querySnap.forEach((doc) => {
                 return coupons.push({
                     id: doc.id,
-                    data: doc.data(),
+                    data: doc.data() as Coupon,
                 })
             })
 
@@ -172,17 +173,27 @@ function Profile() {
                 {!loading && coupons?.length > 0 && (
                     <>
                         <p className="listingText">Your Listings</p>
-                        <ul className="listingsList">
+                        <div className="listingsList" style={{}}>
                             {coupons.map((coupon) => (
-                                <ListingItem
+                                <>
+                                    {/* <ListingItem
                                     key={coupon.id}
                                     listing={coupon.data}
                                     id={coupon.id}
                                     onDelete={() => onDelete(coupon.id || '')}
-                                    onEdit={() => onEdit(coupon.id)}
-                                />
+                                    onEdit={() => onEdit(coupon.id)} /> */}
+                                    <CouponView
+                                        key={coupon.id}
+                                        coupon={coupon?.data}
+                                        id={coupon?.id || ''}
+                                        onDelete={() =>
+                                            onDelete(coupon.id || '')
+                                        }
+                                        onEdit={() => onEdit(coupon.id)}
+                                    />
+                                </>
                             ))}
-                        </ul>
+                        </div>
                     </>
                 )}
             </main>

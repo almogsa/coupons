@@ -39,7 +39,7 @@ type Image = {
 }
 function CreateNewCoupon() {
     const [coupon, setCoupon] = useState<Coupon>({})
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [shareLinkCopied, setShareLinkCopied] = useState(false)
 
     const navigate = useNavigate()
@@ -48,6 +48,8 @@ function CreateNewCoupon() {
 
     const handleSubmit = async (coupon: Coupon) => {
         console.log('Got data handle submit', coupon)
+
+        setLoading(true)
         const images = coupon.imgUrls
         // Store image in firebase
         const storeImage = async (image: any) => {
@@ -136,6 +138,7 @@ function CreateNewCoupon() {
 
     return (
         <Container>
+            {loading && <Spinner />}
             <CouponDetails
                 coupon={coupon}
                 onSubmitHandler={handleSubmit}
